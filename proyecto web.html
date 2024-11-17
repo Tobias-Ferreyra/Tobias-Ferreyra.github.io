@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Ezequiel Ferreyra</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos CSS -->
+</head>
+<body>
+
+    <!-- Sección de encabezado -->
+    <header id="inicio" style="background-image: url('banner\ header.jpg');">
+        <div class="banner">
+            <h1>Tobias Ezequiel Ferreyra</h1> <!-- Tu nombre en el centro del banner -->
+            <img src="logo t.png" alt="Logo Tobias" class="imagen-banner"> <!-- Imagen en el banner -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#galeria">Galería de Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades y Conocimientos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Div sobre el uso de cookies -->
+    <div class="cookie-notice">
+        Este sitio utiliza cookies para mejorar la experiencia del usuario.
+    </div>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre-mi">
+        <div class="biografia">
+            <h2>Sobre mí</h2>
+            <p>Buenas, soy Tobias actualmente estoy estudiando SMR en el centro Grupo Sorolla Educación, también he estudiado Comercio y Marketing.</p>
+            <p>Mi experiencia laboral ha sido trabajando como dependiente en Massimo Dutti para hacer las practicas y después como bartender en un crucero y en diferentes locales como el restaurante de degustación La Salita.</p>
+        
+            <div class="redes-sociales">
+                <a href="#" class="icono">Instagram</a>
+                <a href="#" class="icono">Twitter</a>
+                <a href="#" class="icono">Linkedin</a>
+        </div>
+            </div>
+    </section>
+
+    <!-- Sección "Galería de Proyectos" -->
+    <section id="galeria">
+        <h2>Galería de Proyectos</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="proyecto 1.png" alt="Proyecto 1">
+                <h3>Uso de imagenes con IA</h3>
+                <p>Aprender a crear imagenes con IA a base de promts</p>
+            </div>
+            <div class="proyecto">
+                <img src="proyecto 2.png" alt="Proyecto 2">
+                <h3>Añadir imagenes de fondo</h3>
+                <p>Aprender a añadir imagenes de fondo y banners</p>
+            </div>
+            <div class="proyecto">
+                <img src="proyecto 3.gif" alt="Proyecto 3">
+                <h3>uso de GIF's</h3>
+                <p>Añadir GIF en la web y modificar sus acciones</p>
+            </div>
+            <div class="proyecto">
+                <img src="proyecto 4.png" alt="Proyecto 4">
+                <h3>Uso de IA</h3>
+                <p>Aprender a usar la IA para ayudarte a crear código y depurarlo</p>
+            </div>
+            <div class="proyecto">
+                <img src="proyecto 5.png" alt="Proyecto 5">
+                <h3>Packet tracer</h3>
+                <p>Aprender a crear redes de equipos  y routers</p>
+
+            </div>
+            <div class="proyecto">
+                <img src="proyecto 6.png" alt="Proyecto 6">
+                <h3>Uso de VirtualBox</h3>
+                <p>Crear máquinas virtuales  y configurarlas</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de habilidades y conocimientos -->
+    <section id="habilidades">
+        <h2>Habilidades y Conocimientos</h2>
+        <p>Conocimientos en HTML: crear  páginas web, estructura de páginas, etiquetas, atributos, etc.</p>
+        <p>Conocimientos en CSS: crear  estilos, selección de elementos, propiedades, valores, etc.</p>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required> <!-- Campo obligatorio -->        
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required> <!-- Campo obligatorio y validación de correo electrónico -->
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea> <!-- Campo obligatorio -->
+
+            <button type="submit">¡Contáctame!</button> <!-- Botón para enviar el formulario -->
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; <span id="year"></span> Tobias Ezequiel Ferreyra. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Script para mostrar el año actual en el pie de página
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        // Mostrar el aviso de cookies
+        const cookieNotice = document.querySelector('.cookie-notice');
+        cookieNotice.classList.add('visible');
+    
+        // Ocultar el aviso de cookies al hacer clic
+        cookieNotice.addEventListener('click', () => {
+            cookieNotice.classList.add('hide');
+        });
+    
+        // Ocultar el aviso de cookies automáticamente después de 5 segundos
+        setTimeout(() => {
+            cookieNotice.classList.add('hide');
+        }, 5000);
+    </script>
+</body>
+</html>
